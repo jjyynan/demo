@@ -28,11 +28,11 @@ public class DemoApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
 	}
-	@RequestMapping(value="/{abc}",method=RequestMethod.GET)
+	@RequestMapping(value="/{abc1}",method=RequestMethod.GET)
 	@ResponseBody
-	public String addUser(@PathVariable("abc") Long id) {
+	public String addUser(@PathVariable("abc1") Long id) {
 		RestTemplate restTemplate=new RestTemplate();
-		String url="http://localhost:8081/user/";
+		String url="http://192.168.3.85:8081/user/";
 		UserEntity userEntity=new UserEntity();
 		userEntity.setId(id);
 		userEntity.setUserName("中国MAN");
