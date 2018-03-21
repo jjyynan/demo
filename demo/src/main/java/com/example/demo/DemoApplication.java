@@ -28,9 +28,9 @@ public class DemoApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
 	}
-	@RequestMapping(value="/{abc2}",method=RequestMethod.GET)
+	@RequestMapping(value="/{abc3}",method=RequestMethod.GET)
 	@ResponseBody
-	public String addUser(@PathVariable("abc2") Long id) {
+	public String addUser(@PathVariable("abc3") Long id) {
 		RestTemplate restTemplate=new RestTemplate();
 		String url="http://192.168.3.85:8081/user/";
 		UserEntity userEntity=new UserEntity();
