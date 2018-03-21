@@ -1,8 +1,10 @@
+
 package com.example.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -12,10 +14,11 @@ import org.springframework.web.client.RestTemplate;
 
 import com.example.demo.entity.UserEntity;
 
+
+
 @SpringBootApplication
 @RestController
-@EnableAutoConfiguration
-@RequestMapping("/demo")
+@EnableAutoConfiguration@RequestMapping("/demo")
 public class DemoApplication {
 
 	@RequestMapping("/test")
@@ -25,9 +28,9 @@ public class DemoApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
 	}
-	@RequestMapping(value="/{abc6}",method=RequestMethod.GET)
+	@RequestMapping(value="/{abc7}",method=RequestMethod.GET)
 	@ResponseBody
-	public String addUser(@PathVariable("abc6") Long id) {
+	public String addUser(@PathVariable("abc7") Long id) {
 		RestTemplate restTemplate=new RestTemplate();
 		String url="http://192.168.3.85:8081/user/";
 		UserEntity userEntity=new UserEntity();
